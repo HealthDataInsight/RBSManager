@@ -283,10 +283,6 @@ public class RBSManager: NSObject, WebSocketDelegate {
     public func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
     }
 
-    public func didReceive(event: WebSocketEvent, client: Starscream.WebSocketClient) {
-    }
-
-
     // MARK: - Accessors
 
     /// Retrieve a single subscriber matching the topic and unique ID
