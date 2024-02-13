@@ -250,6 +250,7 @@ public class RBSManager: NSObject, WebSocketDelegate {
 
     public func websocketDidConnect(socket: WebSocketClient) {
         self.timeoutTimer?.invalidate()
+        self.connected = true
         self.advertisePublishers()
         self.attachSubscribers()
         DispatchQueue.main.async {
