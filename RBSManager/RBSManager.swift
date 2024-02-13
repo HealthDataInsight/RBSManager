@@ -11,7 +11,7 @@ import ObjectMapper
 
 private let _sharedManager = RBSManager()
 
-public protocol RBSManagerDelegate {
+public protocol RBSManagerDelegate: AnyObject {
     func manager(_ manager: RBSManager, didDisconnect error: Error?)
     func managerDidConnect(_ manager: RBSManager)
     func manager(_ manager: RBSManager, threwError error: Error)
