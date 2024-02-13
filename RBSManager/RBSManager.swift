@@ -136,7 +136,7 @@ public class RBSManager: NSObject, WebSocketDelegate {
                     // send the delegate method
                     self.connected = false
                     self.socket = nil
-                    let error = self.createError("Connection timed out", code: RBSManagerError.timeoutError.rawValue)
+                    let error = self.createError("connection timed out", code: RBSManagerError.timeoutError.rawValue)
                     self.delegate?.manager(self, threwError: error)
                 })
             }
@@ -249,7 +249,6 @@ public class RBSManager: NSObject, WebSocketDelegate {
     // MARK: WebSocket delegate methods
 
     public func websocketDidConnect(socket: WebSocketClient) {
-        self.connected = true
         self.timeoutTimer?.invalidate()
         self.advertisePublishers()
         self.attachSubscribers()
