@@ -9,8 +9,8 @@ import Foundation
 import ObjectMapper
 
 public class TimeMessage: RBSMessage {
-    public var sec: Float64 = 0
-    public var nsec: Float64 = 0
+    public var sec: Int32 = 0
+    public var nsec: UInt32 = 0
 
     public override init() {
         super.init()
