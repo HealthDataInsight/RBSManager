@@ -26,6 +26,6 @@ public class TimeMessage: RBSMessage {
     }
 
     public func date() -> Date {
-        return Date(timeIntervalSinceReferenceDate: sec)
+        return Date(timeIntervalSinceReferenceDate: Double(sec))
     }
 }
