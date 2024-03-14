@@ -10,7 +10,7 @@ import ObjectMapper
 
 public class TimeMessage: RBSMessage {
     public var sec: Int32 = 0
-    public var nsec: UInt32 = 0
+    public var nanosec: UInt32 = 0
 
     public override init() {
         super.init()
@@ -22,10 +22,10 @@ public class TimeMessage: RBSMessage {
 
     override public func mapping(map: Map) {
         sec <- map["sec"]
-        nsec <- map["nsec"]
+        nsec <- map["nanosec"]
     }
 
     public func date() -> Date {
-        return Date(timeIntervalSinceReferenceDate: Double(sec))
+        return Date(timeIntervalSince1970: Double(sec))
     }
 }
